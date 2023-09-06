@@ -1,9 +1,9 @@
 import IntialModal from "@/components/modals/initial-modal";
 import { db } from "@/lib/db";
-import { intialProfile } from "@/lib/intial-profile";
+import { initialProfile } from "@/lib/intial-profile";
 import { redirect } from "next/navigation";
 const SetupPage = async () => {
-  const profile = await intialProfile();
+  const profile = await initialProfile();
 
   const server = await db.server.findFirst({
     where: {
